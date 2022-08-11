@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.slider {
+    height: 400px;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    padding: 0px 20px;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    scroll-snap-align: start;
+    height: 80%;
+    width: 230px;
+    margin-right: -50px;
+    background-color: aqua;
+    background-image: url("images/1.jpg");
+    background-size: cover;
+    border: solid 0 white;
+    border-radius: 15px;
+    box-shadow: -8px 0px 33px -10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: 0.2s;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@keyframes fadeIn2 {
+    from {
+        filter: blur(6px);
+    }
+    to {
+        filter: blur(0px);
+    }
+}
+
+.card:hover {
+    z-index: 2;
+    margin-right: 50px;
+    margin-top: -20px;
+    transform: rotate(-5deg);
+    animation: fadeIn2 ease-in-out 0.1s;
+    transition: 0.2s;
+}
+
+@keyframes fadeIn1 {
+    from {
+        filter: blur(5px);
+    }
+    to {
+        filter: blur(0px);
+    }
+}
+
+.card:hover .contentContainer {
+    margin-top: 0px;
+    opacity: 1;
+    animation: fadeIn1 linear 0.2s;
+    transition: 0.4s;
+}
+
+.cardHead {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    color: white;
+}
+
+.cardHead .avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.contentContainer {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.753);
+    margin-top: 250px;
+    opacity: 0;
+    box-shadow: 0px 11px 22px 3px black;
+    transition: 0.2s;
+}
+
+.content {
+    color: white;
+}
+
+.content p {
+  text-overflow: ellipsis;
+}
