@@ -41,8 +41,14 @@
       </style>
 
       <div class="container">
-        <h1 style="display: block;">Hi there, <div class="hi">👋</div></h1>
-        <h3> <div class="hi">👉</div> abualhassan1.github.io/css-slider- <div class="hi">👈</div></h3>
+        <ul>
+            <li>
+                <h2 style="display: block;"><div class="hi">👋</div> Hi there, <div class="hi">👋</div></h2>
+            </li>
+            <li>
+                <h3 style="display: block;"> <div class="hi">👉</div> abualhassan1.github.io/css-slider- <div class="hi">👈</div></h3>
+            </li>
+        </ul>
       </div>
     </div>
   </foreignObject>
